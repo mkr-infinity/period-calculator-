@@ -1,7 +1,9 @@
-# JUST PASTE THIS CODE IN YOUR TERMINAL  <br>
+# A simple python compiler made by KAIF😉
+## JUST PASTE THIS CODE IN YOUR TERMINAL  <br>
+
 
 😇GOOD THING IS THAT 👇😉<br>
-IT WORKS ON ONLINE COMPILERS ALSO.
+😇IT WORKS ON ONLINE COMPILERS ALSO.
 
 ### CODE
 ```bash
