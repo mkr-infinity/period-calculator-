@@ -4,6 +4,7 @@
 IT WORKS ON ONLINE COMPILERS ALSO.
 
 ### CODE
+```bash
 import datetime
 
 def period_tracker():
@@ -35,3 +36,5 @@ period_tracker()
 
 #this is an error free code so don't worry about errors.
 #made by ("KAIF")
+#logic given by ("KAIF")
+```
