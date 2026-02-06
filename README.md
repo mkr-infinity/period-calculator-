@@ -1,9 +1,6 @@
-# A simple python compiler made by KAIF😉
-## JUST PASTE THIS CODE IN YOUR TERMINAL  <br>
+## A simple python period date calculator made by Me😉-- <Actually AI>
+## JUST PASTE THIS CODE IN ANY PYTHON COMPILER OR BROWSER BASED COMPILER <br>
 
-
-😇GOOD THING IS THAT 👇😉<br>
-😇IT WORKS ON ONLINE COMPILERS ALSO.
 
 ### CODE
 ```bash
@@ -36,7 +33,5 @@ def period_tracker():
         
 period_tracker()
 
-#this is an error free code so don't worry about errors.
-#made by ("KAIF")
-#logic given by ("KAIF")
+# MADE BY KAIF
 ```
