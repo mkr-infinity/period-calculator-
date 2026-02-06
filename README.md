@@ -1,4 +1,4 @@
-## A simple python period date calculator made by Me😉-- <Actually AI>
+## A simple CLI based python period date calculator made by Me😉-- <Actually AI>
 ## JUST PASTE THIS CODE IN ANY PYTHON COMPILER OR BROWSER BASED COMPILER <br>
 
 
