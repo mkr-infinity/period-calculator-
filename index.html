@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Happy Birthday</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&family=Parisienne&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        class="bg-black overflow-x-hidden text-white h-screen w-screen relative"
+    >
+        <!-- Background Elements -->
+        <div
+            id="stars-container"
+            class="fixed inset-0 z-0 pointer-events-none"
+        ></div>
+        <div
+            class="fixed inset-0 z-0 bg-gradient-to-br from-[#1a0505] via-[#100202] to-[#000000] opacity-100"
+        ></div>
+
+        <!-- Floating Glow Orbs -->
+        <div
+            class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-red-900 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse-slow"
+        ></div>
+        <div
+            class="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-rose-900 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse-slow"
+            style="animation-delay: 2s"
+        ></div>
+
+        <!-- Main Content -->
+        <main
+            class="relative z-10 w-full min-h-screen flex flex-col items-center justify-center p-6 text-center"
+        >
+            <!-- Intro Gift Box -->
+            <div
+                id="gift-container"
+                class="fixed inset-0 z-[60] flex items-center justify-center bg-black transition-all duration-1000"
+            >
+                <div
+                    id="birthday-box"
+                    class="relative w-40 h-40 md:w-48 md:h-48 cursor-pointer group transform hover:scale-105 transition-all duration-500"
+                    data-testid="button-open-box"
+                >
+                    <!-- Box Lid -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-10 md:h-12 bg-red-600 rounded-t-lg z-20 shadow-lg transform transition-transform duration-700 group-hover:-translate-y-4 box-lid"
+                    >
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 md:w-8 h-32 md:h-40 bg-red-400 rotate-90 opacity-80"
+                        ></div>
+                    </div>
+                    <!-- Box Body -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-32 md:h-36 bg-red-700 rounded-b-lg z-10 shadow-2xl overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-6 md:w-8 h-full bg-red-500 opacity-80"
+                        ></div>
+                        <div
+                            class="absolute top-1/2 left-0 -translate-y-1/2 w-full h-6 md:h-8 bg-red-500 opacity-80"
+                        ></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center"
+                        >
+                            <span
+                                class="text-white/60 font-['Montserrat'] text-[10px] md:text-xs tracking-[0.3em] uppercase animate-pulse"
+                                >Tap to Unfold</span
+                            >
+                        </div>
+                    </div>
+                    <!-- Glow effect -->
+                    <div
+                        class="absolute inset-0 bg-red-500 rounded-lg filter blur-3xl opacity-20 group-hover:opacity-50 transition-opacity duration-500"
+                    ></div>
+                </div>
+            </div>
+
+            <!-- Birthday Message Section -->
+            <div
+                id="hero-section"
+                class="flex flex-col items-center justify-center min-h-[80vh] opacity-0 transition-opacity duration-2000"
+            >
+                <h1
+                    class="font-['Parisienne'] text-6xl md:text-8xl lg:text-9xl bg-clip-text text-transparent bg-gradient-to-r from-red-200 via-rose-200 to-orange-100 drop-shadow-[0_0_20px_rgba(255,50,50,0.6)] mb-6 transform translate-y-10 transition-all duration-1000 ease-out animate-glow-text"
+                    id="main-title"
+                >
+                    Happy Birthday 🎉
+                </h1>
+
+                <p
+                    class="font-['Montserrat'] font-light text-lg md:text-2xl text-red-100/80 tracking-widest uppercase transform translate-y-10 transition-all duration-1000 delay-500 ease-out opacity-0"
+                    id="sub-title"
+                >
+                    With lots of good wishes by - Ashvin
+                </p>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div
+                id="scroll-indicator"
+                class="absolute bottom-10 opacity-0 transition-opacity duration-1000 delay-[2500ms] animate-bounce"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8 text-white/30"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                </svg>
+            </div>
+
+            <!-- Quote Cards Section -->
+            <div
+                id="cards-section"
+                class="w-full max-w-4xl mt-20 opacity-0 transition-all duration-1000 transform translate-y-20"
+            >
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="glass-card p-10 rounded-2xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_45px_rgba(239,68,68,0.2)] border border-white/10 relative overflow-hidden group"
+                    >
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        ></div>
+                        <div class="relative z-10">
+                            <span class="text-4xl text-red-300/80 font-serif"
+                                >"</span
+                            >
+                            <p
+                                class="font-['Cormorant_Garamond'] text-2xl md:text-4xl text-white/95 italic leading-relaxed my-4"
+                            >
+                                A real friend is one who walks in when the rest
+                                of the world walks out.
+                            </p>
+                            <div
+                                class="w-16 h-[1px] bg-gradient-to-r from-transparent via-red-400/50 to-transparent mx-auto mt-8"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="glass-card p-10 rounded-2xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_45px_rgba(244,63,94,0.2)] border border-white/10 relative overflow-hidden group delay-100"
+                    >
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        ></div>
+                        <div class="relative z-10">
+                            <span class="text-4xl text-red-300/80 font-serif"
+                                >"</span
+                            >
+                            <p
+                                class="font-['Cormorant_Garamond'] text-2xl md:text-4xl text-white/95 italic leading-relaxed my-4"
+                            >
+                                The greatest gift of life is friendship, and I
+                                have received it.
+                            </p>
+                            <div
+                                class="w-16 h-[1px] bg-gradient-to-r from-transparent via-rose-400/50 to-transparent mx-auto mt-8"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer
+                class="mt-32 mb-10 text-white/20 font-['Montserrat'] text-xs tracking-[0.2em] uppercase"
+            >
+                Made with 💝 by Ashvin for you my lovely friend. Thank you for
+                being my friend. I love you. I love you more than words can
+                express. I love you forever.
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

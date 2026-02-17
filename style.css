@@ -1,0 +1,105 @@
+/* Base Styles */
+body {
+    background-color: #050505;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Glowing Text Animation */
+@keyframes glowText {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.4)); }
+    50% { filter: drop-shadow(0 0 25px rgba(239, 68, 68, 0.8)); }
+}
+
+.animate-glow-text {
+    animation: glowText 3s infinite ease-in-out;
+}
+
+/* Box Animations */
+@keyframes lidOpen {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(-100px) rotate(-10deg) scale(1.1); opacity: 0; }
+}
+
+.box-open .box-lid {
+    animation: lidOpen 1s forwards ease-in-out;
+}
+
+.box-open {
+    transform: scale(10);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s infinite ease-in-out;
+}
+
+/* Star/Particle Animation */
+.particle {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFade 4s infinite ease-in-out;
+}
+
+@keyframes particleFade {
+    0% { opacity: 0; transform: translateY(0) scale(0); }
+    50% { opacity: 0.6; transform: translateY(-20px) scale(1); }
+    100% { opacity: 0; transform: translateY(-40px) scale(0); }
+}
+
+/* Intro Light Burst */
+@keyframes lightBurst {
+    0% { opacity: 0; transform: scale(0.1); }
+    20% { opacity: 1; transform: scale(0.5); }
+    40% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(3); }
+}
+
+.burst-animation {
+    animation: lightBurst 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Text Reveals */
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Scrollbar Hide */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
